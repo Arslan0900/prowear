@@ -1,0 +1,16 @@
+name: Deploy to Development
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: development # Links to the environment settings
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to Dev
+        run: echo "🚀 Deploying to Development environment..."
+        # Add your actual deployment commands here (e.g., npm run deploy:dev)
